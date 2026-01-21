@@ -7,6 +7,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * User Model Class
+ *
+ * Represents an individual in the system with their attributes and permissions.
+ */
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -15,8 +20,10 @@ class User extends Authenticatable
      * Mass assignable attributes
      */
     protected $fillable = [
+        'email',
         'phone_number',
         'name',
+        'password',
         'role',
         'device_fingerprint',
         'preferred_language',
@@ -28,7 +35,7 @@ class User extends Authenticatable
      * Hidden attributes (API safety)
      */
     protected $hidden = [
-        // Nothing sensitive stored in users table
+        'password',
     ];
 
     /**
@@ -59,3 +66,4 @@ class User extends Authenticatable
         return $this->role === 'customer';
     }
 }
+

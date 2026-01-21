@@ -1,6 +1,12 @@
 export default function PlanCard({ title, units, price, unitPrice, active = false }: any) {
     return (
-        <div className={`rounded-xl border p-4 ${active ? 'border-emerald-500 bg-emerald-50' : ''}`}>
+        <div
+            className={`rounded-xl border p-4 transition-all ${active ? '' : 'border-gray-200'}`}
+            style={active ? {
+                borderColor: 'var(--primary-color)',
+                backgroundColor: 'var(--secondary-color)'
+            } : {}}
+        >
             <h3 className="font-medium">{title}</h3>
             <p className="text-sm text-gray-500">{units}</p>
 

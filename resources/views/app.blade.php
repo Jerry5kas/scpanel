@@ -13,6 +13,19 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
+        @php
+            $theme = \App\Models\ThemeSetting::first();
+        @endphp
+        @if($theme)
+            <style>
+                :root {
+                    --primary-color: {{ $theme->primary_color }};
+                    --secondary-color: {{ $theme->secondary_color }};
+                    --tertiary-color: {{ $theme->tertiary_color }};
+                }
+            </style>
+        @endif
+
         @viteReactRefresh
         @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
         @inertiaHead

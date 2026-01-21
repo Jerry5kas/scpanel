@@ -41,6 +41,7 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user(),
             ],
+            'theme' => \App\Models\ThemeSetting::first(),
         ];
     }
 }

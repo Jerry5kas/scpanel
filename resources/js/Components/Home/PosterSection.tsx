@@ -9,7 +9,8 @@ export default function PosterSection() {
             <Link
                 href="/subscriptions"
                 aria-label="FreshTick offers and dairy products"
-                className="block focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-2xl"
+                className="block focus:outline-none rounded-2xl transition-shadow focus:ring-4 focus:ring-opacity-50"
+                style={{ '--tw-ring-color': 'var(--primary-color)' } as any}
             >
                 <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl group">
 

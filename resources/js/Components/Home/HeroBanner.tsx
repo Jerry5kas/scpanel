@@ -2,20 +2,13 @@ import { Link } from '@inertiajs/react';
 
 export default function HeroBanner() {
     return (
-        <section
-            aria-label="Promotional banner"
-            className="max-w-7xl mx-auto px-4 sm:px-6 mt-4"
-        >
-            <Link
-                href="/subscriptions"
-                aria-label="View subscription plans"
-                className="block"
-            >
-                <div className="relative w-full h-[160px] sm:h-[240px] md:h-[380px] rounded-3xl overflow-hidden">
+        <section aria-label="Promotional banner" className="mx-auto mt-4 max-w-7xl px-4 sm:px-6">
+            <Link href="/subscriptions" aria-label="View subscription plans" className="block">
+                <div className="relative h-auto w-full overflow-hidden rounded-2xl sm:h-60 md:h-96">
                     <img
                         src="/images/banner.png"
                         alt="Fresh dairy milk delivery subscription banner"
-                        className="w-full h-full object-cover"
+                        className="h-auto w-full object-cover"
                         loading="eager"
                     />
                 </div>
