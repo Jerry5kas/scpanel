@@ -4,20 +4,33 @@ export default function PosterSection() {
     return (
         <section
             aria-label="Promotional banner"
-            className="max-w-7xl mx-auto py-10"
+            className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10"
         >
             <Link
                 href="/subscriptions"
                 aria-label="FreshTick offers and dairy products"
-                className="block"
+                className="block focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-2xl"
             >
-                <div className="relative overflow-hidden rounded-3xl">
+                <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl group">
+
+                    {/* Banner Image */}
                     <img
                         src="/images/poster1.png"
                         alt="FreshTick promotional banner showing subscription savings and fresh dairy products"
-                        className="w-full h-[180px] sm:h-[240px] md:h-[300px] object-cover"
+                        className="
+                            w-full
+                            aspect-[16/7]
+                            sm:aspect-[16/6]
+                            md:aspect-[16/5]
+                            object-cover
+                            transition-transform
+                            duration-300
+                            group-hover:scale-[1.02]
+                        "
                         loading="lazy"
+                        decoding="async"
                     />
+
                 </div>
             </Link>
         </section>

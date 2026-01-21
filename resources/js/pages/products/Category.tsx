@@ -1,5 +1,3 @@
-import Footer from '@/Components/Layout/Footer';
-import Header from '@/Components/Layout/Header';
 import CategorySidebar from '@/Components/Products/CategorySidebar';
 import ProductCard from '@/Components/Products/ProductCard';
 
@@ -37,8 +35,6 @@ const products = [
 
 export default function Category({ category }: { category: string }) {
     return (
-        <>
-            <Header />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
             <div className="grid gap-6 lg:grid-cols-12">
 
@@ -74,7 +70,5 @@ export default function Category({ category }: { category: string }) {
                 </section>
             </div>
         </div>
-        <Footer />
-        </>
     );
 }

@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-import Footer from '../Components/Layout/Footer';
-import Header from '../Components/Layout/Header';
 import Checkbox from '../Components/Subscription/Checkbox';
 import Chip from '../Components/Subscription/Chip';
 import OrderSummary from '../Components/Subscription/OrderSummary';
@@ -11,9 +9,7 @@ export default function Subscribe() {
     const [quantity, setQuantity] = useState(1);
 
     return (
-        <>
-            <Header />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
             <h1 className="text-lg font-semibold mb-6">Subscribe</h1>
 
             <div className="grid gap-8 lg:grid-cols-3">
@@ -122,7 +118,5 @@ export default function Subscribe() {
                 </div>
             </div>
         </div>
-            <Footer />
-        </>
     );
 }
