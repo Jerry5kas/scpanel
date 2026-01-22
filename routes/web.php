@@ -14,6 +14,14 @@ Route::get('/subscriptions', function () {
     return Inertia::render('Subscribe');
 })->name('subscriptions');
 
+Route::get('/cart', function () {
+    return Inertia::render('Cart');
+})->name('cart');
+
+Route::get('/more', function () {
+    return Inertia::render('More');
+})->name('more');
+
 Route::get('/products', function () {
     return Inertia::render('products/Category', ['category' => 'ghee']);
 })->name('products');

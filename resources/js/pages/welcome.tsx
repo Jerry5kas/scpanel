@@ -1,17 +1,18 @@
-import AppCards from '@/Components/Home/AppCards';
 import HeroBanner from '@/Components/Home/HeroBanner';
-import PosterSection from '@/Components/Home/PosterSection';
-import PromoBanner from '@/Components/Home/PromoBanner';
+import TrendingCategories from '@/Components/Home/TrendingCategories';
 import SubscriptionPlans from '@/Components/Home/SubscriptionPlans';
+import FeaturedPromos from '@/Components/Home/FeaturedPromos';
+import SupportCard from '@/Components/Home/SupportCard';
 
 export default function Welcome() {
     return (
-        <div className="bg-gray-50 min-h-screen">
+        <div className="bg-[#FBFCFD] min-h-screen overflow-x-hidden px-1">
             <HeroBanner />
             <SubscriptionPlans />
-            <PosterSection />
-            <AppCards />
-            <PromoBanner />
+            <FeaturedPromos />
+            {/* <SupportCard /> */}
+            <TrendingCategories />
+
         </div>
     );
 }

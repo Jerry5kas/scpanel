@@ -69,29 +69,34 @@ export default function Header() {
                     </nav>
 
                     {/* Right Controls */}
-                    <div className="flex items-center gap-6">
-
-                        {/* Wallet */}
+                    <div className="flex items-center gap-4 sm:gap-6">
+                        {/* Wallet Section */}
                         <Link
                             href="/wallet"
-                            className={`hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl border transition-all hover:scale-105 active:scale-95 ${url === '/wallet'
-                                    ? 'bg-[var(--primary-color)] text-white border-[var(--primary-color)] shadow-lg shadow-[var(--primary-color)]/20 scale-105'
-                                    : 'text-[var(--primary-color)] bg-[var(--secondary-color)]/30 border-[var(--secondary-color)]/50'
-                                }`}
+                            className="flex items-center gap-3 bg-[#E0F2F1] px-3 py-2 sm:p-2 rounded-2xl transition-all active:scale-95 group sm:bg-transparent"
                         >
-                            <Wallet className="h-4 w-4" />
-                            <span className="text-[13px] font-black tracking-tight">₹0</span>
+                            <div className="relative">
+                                <Wallet className="h-6 w-6 sm:h-8 sm:w-8 text-[#00897B]" strokeWidth={1.5} />
+                                {/* Desktop only badge */}
+                                <div className="hidden sm:flex absolute -top-2 -right-2 bg-[#4DB6AC] text-white text-[10px] font-black px-2 py-0.5 rounded-full min-w-[24px] h-6 items-center justify-center border-2 border-white shadow-md">
+                                    ₹0
+                                </div>
+                            </div>
+                            {/* Mobile only text */}
+                            <span className="text-[14px] font-black text-gray-800 sm:hidden">
+                                ₹0
+                            </span>
                         </Link>
 
                         {/* User Dropdown */}
-                        <div ref={userRef} className="relative hidden md:block">
+                        <div ref={userRef} className="relative">
                             <button
                                 onClick={() => setUserOpen(!userOpen)}
                                 className="flex items-center gap-2 text-[13px] font-black text-gray-700 transition-colors hover:text-[var(--primary-color)]"
                             >
-                                <UserCircle className="w-6 h-6" />
-                                Guest
-                                <ChevronDown className="w-4 h-4 transition-transform duration-300" style={{ transform: userOpen ? 'rotate(180deg)' : 'none' }} />
+                                <UserCircle className="w-6 h-6 sm:w-7 sm:h-7" />
+                                <span className="hidden sm:inline">Guest</span>
+                                <ChevronDown className="w-4 h-4 transition-transform duration-300 hidden sm:block" style={{ transform: userOpen ? 'rotate(180deg)' : 'none' }} />
                             </button>
 
                             {userOpen && (
@@ -118,15 +123,6 @@ export default function Header() {
                                 </div>
                             )}
                         </div>
-
-                        {/* Mobile Hamburger */}
-                        <button
-                            onClick={() => setOpen(!open)}
-                            className="md:hidden p-2 rounded-xl text-gray-600 hover:bg-gray-50 transition-colors"
-                            aria-label="Toggle navigation"
-                        >
-                            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                        </button>
                     </div>
                 </div>
             </header>

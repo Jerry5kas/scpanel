@@ -1,5 +1,5 @@
 import { Head, Link } from '@inertiajs/react';
-import { Calendar as CalendarIcon, Clock, MapPin, Phone, CheckCircle2 } from 'lucide-react';
+import { Calendar as CalendarIcon, Clock, MapPin, Phone, CheckCircle2, ChevronLeft, Trash2 } from 'lucide-react';
 import { useState } from 'react';
 
 interface DeliveryItem {
@@ -66,12 +66,23 @@ export default function Deliveries() {
     const activeDeliveries = deliveries[selectedDate] || [];
 
     return (
-        <div className="bg-[#FAF9F6] min-h-screen pb-20 pt-10">
+        <div className="bg-[#FAF9F6] min-h-screen pb-24 sm:pb-20">
             <Head title="My Deliveries" />
 
-            <div className="max-w-4xl mx-auto px-4 sm:px-6">
-                {/* Centered Page Title */}
-                <div className="text-center mb-8">
+            {/* Custom Header - Mobile Only */}
+            <header className="flex-shrink-0 flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-white z-20 sm:hidden">
+                <Link href="/" className="p-2 -ml-2 transition-transform active:scale-90">
+                    <ChevronLeft className="w-7 h-7 text-gray-700" strokeWidth={1.5} />
+                </Link>
+                <h1 className="text-[18px] font-bold text-gray-800 tracking-tight">Upcoming Deliveries</h1>
+                <button className="p-2 -mr-2 transition-transform active:scale-90">
+                    <Trash2 className="w-6 h-6 text-emerald-600/60" strokeWidth={1.5} />
+                </button>
+            </header>
+
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+                {/* Desktop Title */}
+                <div className="hidden sm:block text-center mb-8">
                     <h1 className="text-[28px] font-black text-gray-900 tracking-tight">
                         Delivery for {new Date(selectedDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}
                     </h1>

@@ -1,6 +1,7 @@
 import CategorySidebar from '@/Components/Products/CategorySidebar';
 import ProductCard from '@/Components/Products/ProductCard';
-
+import { Link, Head } from '@inertiajs/react';
+import { ChevronLeft, Search } from 'lucide-react';
 
 const products = [
     {
@@ -41,47 +42,72 @@ const products = [
 
 export default function Category({ category }: { category: string }) {
     return (
-        <div className="bg-[#FAF9F6] min-h-screen">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
-                <div className="grid gap-8 lg:grid-cols-12">
+        <>
+            <Head title={`Store - ${category}`} />
+            
+            <div className="bg-white sm:bg-[#FAF9F6] flex flex-col overflow-hidden fixed sm:relative top-0 sm:top-0 bottom-[64px] sm:bottom-0 inset-x-0 z-10 sm:min-h-screen">
+                {/* Custom Store Header - Mobile Only */}
+                <header className="flex-shrink-0 flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-white z-20 sm:hidden">
+                    <Link href="/" className="p-2 -ml-2 transition-transform active:scale-90">
+                        <ChevronLeft className="w-7 h-7 text-gray-700" strokeWidth={1.5} />
+                    </Link>
+                    <h1 className="text-[18px] font-bold text-gray-800 tracking-tight">Store</h1>
+                    <button className="p-2 -mr-2 transition-transform active:scale-90">
+                        <Search className="w-6 h-6 text-emerald-600/60" strokeWidth={1.5} />
+                    </button>
+                </header>
 
-                    {/* Sidebar */}
-                    <aside className="lg:col-span-3">
+                <div className="flex flex-1 overflow-hidden h-full sm:max-w-7xl sm:mx-auto sm:px-6 sm:py-10 sm:gap-10 sm:overflow-visible">
+                    {/* Fixed Category Sidebar - Independent Scroll on Mobile, Static on Desktop */}
+                    <aside className="w-[80px] sm:w-[320px] flex-shrink-0 bg-[#F8F9FA] sm:bg-transparent border-r border-gray-100 sm:border-r-0 h-full sm:h-auto overflow-y-auto sm:overflow-visible scrollbar-hide">
                         <CategorySidebar />
+                        {/* Mobile bottom spacer */}
+                        <div className="h-20 sm:hidden" />
                     </aside>
 
-                    {/* Main Content */}
-                    <section className="lg:col-span-9">
-                        {/* Header */}
-                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10">
-                            <h1 className="text-3xl font-black text-gray-900 tracking-tight capitalize border-l-[6px] pl-5" style={{ borderColor: 'var(--primary-color)' }}>
+                    {/* Main Product Area */}
+                    <main className="flex-1 overflow-y-auto sm:overflow-visible bg-white sm:bg-transparent scrollbar-hide h-full sm:h-auto flex flex-col">
+                        {/* Desktop Header */}
+                        <div className="hidden sm:flex items-center justify-between mb-8">
+                            <h2 className="text-[28px] font-black text-gray-900 tracking-tight capitalize border-l-[6px] pl-5" style={{ borderColor: 'var(--primary-color)' }}>
                                 {category}
-                            </h1>
-
-                            <div className="relative group w-full sm:w-80">
+                            </h2>
+                            
+                            <div className="relative w-80">
                                 <input
                                     type="text"
                                     placeholder="Search products..."
-                                    className="w-full rounded-2xl border-none bg-white px-5 py-3.5 pl-12 shadow-sm shadow-gray-200/50 transition-all focus:ring-2 focus:ring-offset-1 text-sm font-medium"
+                                    className="w-full rounded-2xl border-none bg-white px-5 py-4 pl-12 shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all focus:ring-2 text-sm font-medium"
                                     style={{ '--tw-ring-color': 'var(--primary-color)' } as any}
                                 />
-                                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-gray-600 transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                    </svg>
-                                </span>
+                                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                             </div>
                         </div>
 
-                        {/* Products Grid */}
-                        <div className="grid gap-6 md:grid-cols-2">
+                        {/* Mobile Category Indicator */}
+                        <div className="sm:hidden px-4 py-2 bg-white sticky top-0 z-10 border-b border-gray-50 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+                            <p className="text-[10px] font-black uppercase tracking-widest text-[var(--primary-color)]">
+                                <span className="opacity-40 text-gray-500">Category:</span> {category}
+                            </p>
+                        </div>
+
+                        {/* Products List/Grid */}
+                        <div className="divide-y divide-gray-100 sm:grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5 sm:divide-y-0">
                             {products.map(product => (
                                 <ProductCard key={product.id} product={product} />
                             ))}
+                            
+                            {/* Final spacer for mobile */}
+                            <div className="h-24 sm:hidden" />
                         </div>
-                    </section>
+                    </main>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
+
+
+
+
+
