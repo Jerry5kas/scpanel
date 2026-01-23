@@ -2,7 +2,11 @@ import { X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { usePage, Link } from '@inertiajs/react';
 
-export default function TrialPackPopup() {
+interface TrialPackPopupProps {
+    shouldShow?: boolean;
+}
+
+export default function TrialPackPopup({ shouldShow = true }: TrialPackPopupProps) {
     const { url } = usePage();
     const [open, setOpen] = useState(false);
 
@@ -10,11 +14,12 @@ export default function TrialPackPopup() {
     const isHomePage = url === '/' || url === '';
 
     useEffect(() => {
-        if (isHomePage) {
+        if (isHomePage && shouldShow) {
             const timer = setTimeout(() => setOpen(true), 1000); // 1s delay for better UX
             return () => clearTimeout(timer);
         }
-    }, [isHomePage]);
+    }, [isHomePage, shouldShow]);
+
 
     if (!open || !isHomePage) return null;
 

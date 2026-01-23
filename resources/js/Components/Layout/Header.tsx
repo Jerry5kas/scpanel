@@ -89,7 +89,7 @@ export default function Header() {
                         </Link>
 
                         {/* User Dropdown */}
-                        <div ref={userRef} className="relative">
+                        <div ref={userRef} className="relative hidden sm:block">
                             <button
                                 onClick={() => setUserOpen(!userOpen)}
                                 className="flex items-center gap-2 text-[13px] font-black text-gray-700 transition-colors hover:text-[var(--primary-color)]"

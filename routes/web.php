@@ -38,6 +38,43 @@ Route::get('/wallet', function () {
     return Inertia::render('Wallet');
 })->name('wallet');
 
+Route::get('/support', function () {
+    return Inertia::render('Support');
+})->name('support');
+
+Route::get('/address', function () {
+    return Inertia::render('AddressBook');
+})->name('address');
+
+// Placeholder routes for other links to avoid 404s
+Route::get('/orders', function () {
+    return redirect()->route('deliveries');
+});
+
+Route::get('/transactions', function () {
+    return Inertia::render('More'); // Point to More page as placeholder
+});
+
+Route::get('/refer', function () {
+    return Inertia::render('More');
+});
+
+Route::get('/account', function () {
+    return Inertia::render('More');
+});
+
+Route::get('/service-area', function () {
+    return Inertia::render('More');
+});
+
+Route::get('/policy', function () {
+    return Inertia::render('More');
+});
+
+Route::get('/bills', function () {
+    return Inertia::render('More');
+});
+
 Route::get('/verify-otp', function () {
     return Inertia::render('Admin/Auth/VerifyOtp');
 })->name('admin.otp.verify');
