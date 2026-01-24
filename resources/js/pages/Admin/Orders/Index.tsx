@@ -57,7 +57,7 @@ export default function OrdersIndex() {
             key: 'order_number', 
             label: 'ID', 
             sortable: true,
-            render: (row) => <span className="text-[#37696c] font-medium">{row.order_number}</span>
+            render: (row) => <span className="text-[#148284] font-medium">{row.order_number}</span>
         },
         { 
             key: 'name', 
@@ -65,7 +65,7 @@ export default function OrdersIndex() {
             sortable: true,
             render: (row) => (
                 <div className="flex flex-col">
-                    <span className="text-[#37696c] font-medium">{row.name}</span>
+                    <span className="text-[#148284] font-medium">{row.name}</span>
                     <span className="text-xs text-gray-500">{row.phone}</span>
                 </div>
             )
@@ -103,7 +103,7 @@ export default function OrdersIndex() {
             key: 'action', 
             label: 'Action', 
             render: () => (
-                 <button className="text-[#337ab7]">
+                 <button className="text-[#148284]">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             )

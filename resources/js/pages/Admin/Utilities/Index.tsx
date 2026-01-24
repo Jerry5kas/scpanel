@@ -90,7 +90,7 @@ export default function UtilitiesIndex() {
         {
             key: 'action',
             label: 'Action',
-            render: () => <button className="text-[#37696c] hover:underline hover:text-[#2d5659] text-sm font-medium">Edit</button>
+            render: () => <button className="text-[#148284] hover:underline hover:text-[#2d5659] text-sm font-medium">Edit</button>
         }
     ];
 
@@ -119,7 +119,7 @@ export default function UtilitiesIndex() {
         {
             key: 'action',
             label: 'Action',
-            render: () => <button className="text-[#37696c] hover:underline hover:text-[#2d5659] text-sm font-medium">Edit</button>
+            render: () => <button className="text-[#148284] hover:underline hover:text-[#2d5659] text-sm font-medium">Edit</button>
         }
     ];
 
@@ -135,7 +135,7 @@ export default function UtilitiesIndex() {
         {
             key: 'action',
             label: 'Action',
-            render: () => <button className="text-[#37696c] hover:underline hover:text-[#2d5659] text-sm font-medium">Edit</button>
+            render: () => <button className="text-[#148284] hover:underline hover:text-[#2d5659] text-sm font-medium">Edit</button>
         }
     ];
 
@@ -149,7 +149,7 @@ export default function UtilitiesIndex() {
                     onClick={() => setActiveTab('routes')}
                     className={`flex flex-col items-center justify-center p-4 border-r border-gray-100 transition-colors ${
                         activeTab === 'routes' 
-                            ? 'bg-[#37696c] text-white' 
+                            ? 'bg-[#148284] text-white' 
                             : 'bg-green-50/50 hover:bg-gray-50 text-gray-600'
                     }`}
                 >
@@ -160,7 +160,7 @@ export default function UtilitiesIndex() {
                     onClick={() => setActiveTab('drivers')}
                     className={`flex flex-col items-center justify-center p-4 border-r border-gray-100 transition-colors ${
                         activeTab === 'drivers' 
-                            ? 'bg-[#37696c] text-white' 
+                            ? 'bg-[#148284] text-white' 
                             : 'bg-green-50/50 hover:bg-gray-50 text-gray-600'
                     }`}
                 >
@@ -171,7 +171,7 @@ export default function UtilitiesIndex() {
                     onClick={() => setActiveTab('hubs')}
                     className={`flex flex-col items-center justify-center p-4 border-r border-gray-100 transition-colors ${
                         activeTab === 'hubs' 
-                            ? 'bg-[#37696c] text-white' 
+                            ? 'bg-[#148284] text-white' 
                             : 'bg-green-50/50 hover:bg-gray-50 text-gray-600'
                     }`}
                 >
@@ -182,7 +182,7 @@ export default function UtilitiesIndex() {
                     onClick={() => setActiveTab('zones')}
                     className={`flex flex-col items-center justify-center p-4 border-r border-gray-100 transition-colors ${
                         activeTab === 'zones' 
-                            ? 'bg-[#37696c] text-white' 
+                            ? 'bg-[#148284] text-white' 
                             : 'bg-green-50/50 hover:bg-gray-50 text-gray-600'
                     }`}
                 >
@@ -193,7 +193,7 @@ export default function UtilitiesIndex() {
                     onClick={() => setActiveTab('bulk')}
                     className={`flex flex-col items-center justify-center p-4 transition-colors ${
                         activeTab === 'bulk' 
-                            ? 'bg-[#37696c] text-white' 
+                            ? 'bg-[#148284] text-white' 
                             : 'bg-green-50/50 hover:bg-gray-50 text-gray-600'
                     }`}
                 >
@@ -262,7 +262,7 @@ export default function UtilitiesIndex() {
                             { 
                                 key: 'action', 
                                 label: 'Action',
-                                render: () => <button className="text-[#37696c] hover:underline font-medium text-sm">Edit</button>
+                                render: () => <button className="text-[#148284] hover:underline font-medium text-sm">Edit</button>
                             }
                         ]} 
                         data={[
@@ -309,7 +309,7 @@ export default function UtilitiesIndex() {
                             <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gray-200 -z-0"></div>
                             
                             <div className="relative z-10 flex flex-col items-center gap-2">
-                                <div className="w-10 h-10 rounded-full border-2 border-[#37696c] bg-white flex items-center justify-center text-[#37696c] font-bold">1</div>
+                                <div className="w-10 h-10 rounded-full border-2 border-[#148284] bg-white flex items-center justify-center text-[#148284] font-bold">1</div>
                                 <span className="text-sm font-bold text-gray-800">Select</span>
                             </div>
                             
@@ -329,7 +329,7 @@ export default function UtilitiesIndex() {
                             <div className="space-y-2">
                                 <h3 className="text-lg font-medium text-gray-700">Select</h3>
                                 <div className="space-y-1">
-                                    <select className="w-full px-4 py-2 border border-gray-300 rounded text-sm focus:ring-[#37696c] focus:border-[#37696c] text-gray-500">
+                                    <select className="w-full px-4 py-2 border border-gray-300 rounded text-sm focus:ring-[#148284] focus:border-[#148284] text-gray-500">
                                         <option>Select Type</option>
                                         <option>Customers</option>
                                         <option>Products</option>

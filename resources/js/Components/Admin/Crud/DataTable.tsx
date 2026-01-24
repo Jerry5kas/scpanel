@@ -59,7 +59,7 @@ export default function DataTable<T extends { id: string | number }>({
                     <h2 className="text-lg font-medium text-gray-700">{title}</h2>
                 </div>
                 <div className="flex items-center gap-2">
-                    <button className="p-2 text-white bg-[#337ab7] rounded hover:bg-blue-700 transition-colors shadow-sm">
+                    <button className="p-2 text-white bg-[#148284] rounded hover:bg-blue-700 transition-colors shadow-sm">
                         <Bell className="w-4 h-4" />
                     </button>
                     <button className="p-2 text-white bg-[#5cb85c] rounded hover:bg-green-700 transition-colors shadow-sm">
@@ -74,7 +74,7 @@ export default function DataTable<T extends { id: string | number }>({
                     {onAddClick && (
                         <button 
                             onClick={onAddClick}
-                            className="flex items-center gap-1 px-4 py-2 bg-[#337ab7] text-white rounded hover:bg-blue-700 transition-colors shadow-sm text-sm font-medium"
+                            className="flex items-center gap-1 px-4 py-2 bg-[#148284] text-white rounded hover:bg-blue-700 transition-colors shadow-sm text-sm font-medium"
                         >
                             <Plus className="w-4 h-4" />
                             Add
@@ -89,7 +89,7 @@ export default function DataTable<T extends { id: string | number }>({
                     <thead className="text-white bg-[#333333]">
                         <tr>
                             <th className="p-4 w-12 border-r border-gray-600">
-                                <input type="checkbox" className="rounded border-gray-400 text-[#337ab7] focus:ring-[#337ab7]" />
+                                <input type="checkbox" className="rounded border-gray-400 text-[#148284] focus:ring-[#148284]" />
                             </th>
                             {columns.map((col, idx) => (
                                 <th key={String(col.key)} className="px-4 py-3 font-medium border-r border-gray-600 last:border-r-0 whitespace-nowrap">
@@ -109,7 +109,7 @@ export default function DataTable<T extends { id: string | number }>({
                                 <th key={`search-${String(col.key)}`} className="px-2 py-2 border-r border-gray-200 last:border-r-0">
                                     {col.searchable !== false && (
                                         col.filterOptions ? (
-                                            <select className="w-full text-xs border-gray-200 rounded px-2 py-1.5 focus:border-[#337ab7] focus:ring-1 focus:ring-[#337ab7] outline-none text-gray-500">
+                                            <select className="w-full text-xs border-gray-200 rounded px-2 py-1.5 focus:border-[#148284] focus:ring-1 focus:ring-[#148284] outline-none text-gray-500">
                                                 {col.filterOptions.map(opt => (
                                                     <option key={opt} value={opt}>{opt}</option>
                                                 ))}
@@ -118,7 +118,7 @@ export default function DataTable<T extends { id: string | number }>({
                                             <input 
                                                 type="text" 
                                                 placeholder={col.label === 'Action' ? '' : `Search ${col.label.replace('?', '')}`}
-                                                className={`w-full text-xs border-gray-200 rounded px-2 py-1.5 focus:border-[#337ab7] focus:ring-1 focus:ring-[#337ab7] outline-none placeholder:text-gray-400 ${col.label === 'Action' ? 'invisible' : ''}`}
+                                                className={`w-full text-xs border-gray-200 rounded px-2 py-1.5 focus:border-[#148284] focus:ring-1 focus:ring-[#148284] outline-none placeholder:text-gray-400 ${col.label === 'Action' ? 'invisible' : ''}`}
                                             />
                                         )
                                     )}
@@ -130,7 +130,7 @@ export default function DataTable<T extends { id: string | number }>({
                         {data.map((row, rowIndex) => (
                             <tr key={row.id} className="hover:bg-gray-50 transition-colors text-gray-600">
                                 <td className="p-4 border-r border-gray-100">
-                                    <input type="checkbox" className="rounded border-gray-300 text-[#337ab7] focus:ring-[#337ab7]" />
+                                    <input type="checkbox" className="rounded border-gray-300 text-[#148284] focus:ring-[#148284]" />
                                 </td>
                                 {columns.map((col) => (
                                     <td key={`${row.id}-${String(col.key)}`} className="px-4 py-3 border-r border-gray-100 last:border-r-0">
@@ -148,7 +148,7 @@ export default function DataTable<T extends { id: string | number }>({
                 <button className="px-2 py-1 border border-gray-200 rounded hover:bg-gray-50 disabled:opacity-50">
                     <ChevronDown className="w-4 h-4 rotate-90" />
                 </button>
-                <button className="px-3 py-1 bg-[#337ab7] text-white rounded font-medium">1</button>
+                <button className="px-3 py-1 bg-[#148284] text-white rounded font-medium">1</button>
                 <button className="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">2</button>
                 <button className="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">3</button>
                 <button className="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">4</button>
@@ -158,7 +158,7 @@ export default function DataTable<T extends { id: string | number }>({
                     <ChevronDown className="w-4 h-4 -rotate-90" />
                 </button>
                 <div className="ml-4 flex items-center gap-2">
-                     <select className="border border-gray-200 rounded px-2 py-1 text-xs focus:ring-[#337ab7] focus:border-[#337ab7]">
+                     <select className="border border-gray-200 rounded px-2 py-1 text-xs focus:ring-[#148284] focus:border-[#148284]">
                         <option>10 / page</option>
                         <option>20 / page</option>
                         <option>50 / page</option>

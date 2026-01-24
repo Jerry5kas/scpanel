@@ -74,7 +74,7 @@ export default function BillsIndex() {
                     <button className="text-teal-600 hover:text-teal-800">
                         <DollarSign className="w-4 h-4" />
                     </button>
-                    <button className="text-[#337ab7] hover:text-blue-800">
+                    <button className="text-[#148284] hover:text-blue-800">
                         <Share2 className="w-4 h-4" />
                     </button>
                     <button className="text-green-500 hover:text-green-700">
@@ -94,19 +94,19 @@ export default function BillsIndex() {
                 <div className="w-full md:w-48 space-y-1">
                     <label className="text-xs text-gray-500 font-medium">Filter By</label>
                     <div className="flex gap-2">
-                        <input type="text" defaultValue="December 2025" className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-[#37696c] focus:border-[#37696c]" />
-                        <button className="bg-[#337ab7] hover:bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium">Show</button>
+                        <input type="text" defaultValue="December 2025" className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-[#148284] focus:border-[#148284]" />
+                        <button className="bg-[#148284] hover:bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium">Show</button>
                     </div>
                 </div>
                 
                  <div className="w-full md:w-auto flex items-end gap-4">
                     <div className="flex-1 md:w-96 space-y-1">
                         <label className="text-xs text-gray-500 font-medium">Filter by Routes</label>
-                        <select className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-[#37696c] focus:border-[#37696c]">
+                        <select className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-[#148284] focus:border-[#148284]">
                            <option>Malipuram, Nayarambalam, High Court, Alathurp...</option> 
                         </select>
                     </div>
-                    <button className="bg-[#337ab7] p-2 rounded text-white shadow-sm hover:bg-blue-600">
+                    <button className="bg-[#148284] p-2 rounded text-white shadow-sm hover:bg-blue-600">
                         <Bell className="w-5 h-5" />
                     </button>
                     <button className="bg-[#5cb85c] px-4 py-2 rounded text-white shadow-sm hover:bg-green-600 flex items-center gap-2 text-sm font-medium">

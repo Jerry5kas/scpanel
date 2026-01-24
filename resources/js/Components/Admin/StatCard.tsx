@@ -47,7 +47,7 @@ export default function StatCard({ title, value, subtitle, icon: Icon, color = '
 
             <div className="mt-3">
                 <div className="text-2xl font-black text-gray-900 leading-none tracking-tight">{value}</div>
-                <p className="mt-1.5 text-[10px] font-bold uppercase tracking-widest truncate" style={{ color: 'var(--primary-color)' }}>{subtitle}</p>
+                <p className="mt-1.5 text-[10px] font-bold uppercase tracking-widest truncate" style={{ color: '#148284' }}>{subtitle}</p>
             </div>
         </div>
     );

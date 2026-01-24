@@ -51,15 +51,15 @@ export default function Edit({ theme }: Props) {
             <Head title="Settings" />
 
             {/* Header Tabs */}
-            <div className="rounded-xl bg-[#00897B]/5 p-1">
+            <div className="rounded-xl bg-[#148284]/5 p-1">
                 <div className="flex flex-wrap items-center gap-1">
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
                             className={`flex items-center gap-2 rounded-lg px-6 py-2.5 text-sm font-bold transition-all ${activeTab === tab.id
-                                ? 'bg-[#00897B] text-white shadow-md'
-                                : 'text-gray-600 hover:bg-[#00897B]/10 hover:text-[#00897B]'
+                                ? 'bg-[#148284] text-white shadow-md'
+                                : 'text-gray-600 hover:bg-[#148284]/10 hover:text-[#148284]'
                                 }`}
                         >
                             <tab.icon className="h-4 w-4" />
@@ -76,7 +76,7 @@ export default function Edit({ theme }: Props) {
                         key={tab.id}
                         onClick={() => setActiveSubTab(tab.id)}
                         className={`flex items-center gap-2 px-4 py-2 text-sm font-bold transition-all border-b-2 ${activeSubTab === tab.id
-                            ? 'border-[#00897B] text-[#00897B]'
+                            ? 'border-[#148284] text-[#148284]'
                             : 'border-transparent text-gray-500 hover:text-gray-700'
                             }`}
                     >
@@ -102,7 +102,7 @@ export default function Edit({ theme }: Props) {
                                     type="text"
                                     value={data.app_name}
                                     onChange={(e) => setData('app_name', e.target.value)}
-                                    className="w-full rounded-xl border-gray-200 bg-gray-50 p-3 text-sm focus:border-[#00897B] focus:ring-1 focus:ring-[#00897B] transition-all"
+                                    className="w-full rounded-xl border-gray-200 bg-gray-50 p-3 text-sm focus:border-[#148284] focus:ring-1 focus:ring-[#148284] transition-all"
                                     placeholder="Enter App Name"
                                 />
                                 {errors.app_name && <div className="text-xs font-medium text-red-500">{errors.app_name}</div>}
@@ -217,7 +217,7 @@ export default function Edit({ theme }: Props) {
                                 type="submit"
                                 disabled={processing}
                                 className="flex items-center gap-2 rounded-xl px-8 py-3 text-sm font-bold text-white shadow-lg focus:ring-2 focus:ring-offset-2 transition-all disabled:opacity-50"
-                                style={{ backgroundColor: data.primary_color || '#00897B' }}
+                                style={{ backgroundColor: data.primary_color || '#148284' }}
                             >
                                 <Save className="h-4 w-4" />
                                 {processing ? 'Updating Global Theme...' : 'Apply Changes Globally'}

@@ -62,13 +62,13 @@ function Dashboard() {
                             <div className="flex items-center justify-between rounded-lg bg-white p-3 shadow-sm">
                                 <div>
                                     <p className="text-[13px] font-bold text-gray-800">Wed, 21st January</p>
-                                    <p className="text-[10px] font-bold uppercase tracking-tighter mt-0.5" style={{ color: 'var(--primary-color)' }}>One Time Order</p>
+                                    <p className="text-[10px] font-bold uppercase tracking-tighter mt-0.5" style={{ color: '#148284' }}>One Time Order</p>
                                 </div>
                             </div>
                             <div className="flex items-center justify-between rounded-lg bg-white p-3 shadow-sm">
                                 <div>
                                     <p className="text-[13px] font-bold text-gray-800">Wed, 21st January</p>
-                                    <p className="text-[10px] font-bold uppercase tracking-tighter mt-0.5" style={{ color: 'var(--primary-color)' }}>Morning Slot</p>
+                                    <p className="text-[10px] font-bold uppercase tracking-tighter mt-0.5" style={{ color: '#148284' }}>Morning Slot</p>
                                 </div>
                             </div>
                         </div>
@@ -114,13 +114,13 @@ function Dashboard() {
                             <div className="flex items-center justify-between rounded-lg bg-white p-3 shadow-sm">
                                 <div>
                                     <p className="text-[13px] font-bold text-gray-800">Thu, 22nd January</p>
-                                    <p className="text-[10px] font-bold uppercase tracking-tighter mt-0.5" style={{ color: 'var(--primary-color)' }}>Morning Slot</p>
+                                    <p className="text-[10px] font-bold uppercase tracking-tighter mt-0.5" style={{ color: '#148284' }}>Morning Slot</p>
                                 </div>
                             </div>
                             <div className="flex items-center justify-between rounded-lg bg-white p-3 shadow-sm">
                                 <div>
                                     <p className="text-[13px] font-bold text-gray-800">Thu, 22nd January</p>
-                                    <p className="text-[10px] font-bold uppercase tracking-tighter mt-0.5" style={{ color: 'var(--primary-color)' }}>One Time Order</p>
+                                    <p className="text-[10px] font-bold uppercase tracking-tighter mt-0.5" style={{ color: '#148284' }}>One Time Order</p>
                                 </div>
                             </div>
                         </div>

@@ -95,7 +95,7 @@ export default function SubscriptionsIndex() {
                     onClick={() => setActiveTab('all')}
                     className={`px-4 py-2 text-sm font-medium rounded-t-md transition-colors ${
                         activeTab === 'all' 
-                            ? 'bg-[#37696c] text-white' 
+                            ? 'bg-[#148284] text-white' 
                             : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
                     }`}
                 >
@@ -105,7 +105,7 @@ export default function SubscriptionsIndex() {
                     onClick={() => setActiveTab('low_balance')}
                     className={`px-4 py-2 text-sm font-medium rounded-t-md transition-colors ${
                         activeTab === 'low_balance' 
-                            ? 'bg-[#37696c] text-white' 
+                            ? 'bg-[#148284] text-white' 
                             : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
                     }`}
                 >

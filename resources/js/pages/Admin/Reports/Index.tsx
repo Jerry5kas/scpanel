@@ -33,7 +33,7 @@ export default function ReportsIndex() {
                             onClick={() => setActiveReport(item.name)}
                             className={`w-full flex items-center justify-between px-6 py-4 text-sm font-medium transition-colors hover:bg-gray-50 ${
                                 activeReport === item.name 
-                                    ? 'bg-gray-50 text-gray-900 border-l-4 border-l-[#37696c]' 
+                                    ? 'bg-gray-50 text-gray-900 border-l-4 border-l-[#148284]' 
                                     : 'text-gray-600 border-l-4 border-l-transparent'
                             }`}
                         >
@@ -62,18 +62,18 @@ export default function ReportsIndex() {
                             <input 
                                 type="text" 
                                 defaultValue="1 January 2026 - 24 January 2026"
-                                className="w-full px-4 py-2 border border-gray-300 rounded shadow-sm focus:ring-[#37696c] focus:border-[#37696c] text-sm text-gray-700"
+                                className="w-full px-4 py-2 border border-gray-300 rounded shadow-sm focus:ring-[#148284] focus:border-[#148284] text-sm text-gray-700"
                             />
                         </div>
 
                         <div className="flex gap-2">
-                            <button className="px-3 py-1 bg-[#d0e0e3] text-[#37696c] rounded text-xs font-medium hover:bg-[#b0ced3]">This Month</button>
-                            <button className="px-3 py-1 bg-[#d0e0e3] text-[#37696c] rounded text-xs font-medium hover:bg-[#b0ced3]">Last Month</button>
-                            <button className="px-3 py-1 bg-[#d0e0e3] text-[#37696c] rounded text-xs font-medium hover:bg-[#b0ced3]">Last 30 Days</button>
+                            <button className="px-3 py-1 bg-[#d0e0e3] text-[#148284] rounded text-xs font-medium hover:bg-[#b0ced3]">This Month</button>
+                            <button className="px-3 py-1 bg-[#d0e0e3] text-[#148284] rounded text-xs font-medium hover:bg-[#b0ced3]">Last Month</button>
+                            <button className="px-3 py-1 bg-[#d0e0e3] text-[#148284] rounded text-xs font-medium hover:bg-[#b0ced3]">Last 30 Days</button>
                         </div>
 
                         <div className="pt-8 flex justify-end">
-                            <button className="flex items-center gap-2 px-6 py-2 bg-[#337ab7] text-white rounded font-medium shadow-sm hover:bg-blue-600 transition-colors">
+                            <button className="flex items-center gap-2 px-6 py-2 bg-[#148284] text-white rounded font-medium shadow-sm hover:bg-blue-600 transition-colors">
                                 <Download className="w-4 h-4" />
                                 Download Report
                             </button>

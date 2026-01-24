@@ -35,7 +35,7 @@ export default function MarketingIndex() {
             label: 'Action',
             render: (row) => (
                 <div className="flex items-center gap-2">
-                    <button className="text-[#337ab7] hover:underline text-sm font-medium">Edit</button>
+                    <button className="text-[#148284] hover:underline text-sm font-medium">Edit</button>
                     <button className="p-1 px-2 bg-[#5cb85c] hover:bg-green-600 text-white rounded">
                         <Download className="w-4 h-4" />
                     </button>
@@ -54,7 +54,7 @@ export default function MarketingIndex() {
                     onClick={() => setActiveTab('notifications')}
                     className={`flex flex-col items-center justify-center p-4 border-r border-gray-100 transition-colors ${
                         activeTab === 'notifications' 
-                            ? 'bg-[#37696c] text-white' 
+                            ? 'bg-[#148284] text-white' 
                             : 'bg-green-50/50 hover:bg-gray-50 text-gray-600'
                     }`}
                 >
@@ -65,7 +65,7 @@ export default function MarketingIndex() {
                     onClick={() => setActiveTab('discounts')}
                     className={`flex flex-col items-center justify-center p-4 border-r border-gray-100 transition-colors ${
                         activeTab === 'discounts' 
-                            ? 'bg-[#37696c] text-white' 
+                            ? 'bg-[#148284] text-white' 
                             : 'bg-green-50/50 hover:bg-gray-50 text-gray-600'
                     }`}
                 >
@@ -76,7 +76,7 @@ export default function MarketingIndex() {
                     onClick={() => setActiveTab('refer')}
                     className={`flex flex-col items-center justify-center p-4 transition-colors ${
                         activeTab === 'refer' 
-                            ? 'bg-[#37696c] text-white' 
+                            ? 'bg-[#148284] text-white' 
                             : 'bg-green-50/50 hover:bg-gray-50 text-gray-600'
                     }`}
                 >
@@ -90,7 +90,7 @@ export default function MarketingIndex() {
                 <div className="bg-white rounded-md shadow-sm border border-gray-200">
                     <div className="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
                         <h2 className="text-lg font-medium text-gray-700">Send New Notification</h2>
-                        <button className="p-2 bg-[#37696c] text-white rounded hover:bg-[#2d5659]">
+                        <button className="p-2 bg-[#148284] text-white rounded hover:bg-[#2d5659]">
                             <FolderOpen className="w-4 h-4" />
                         </button>
                     </div>
@@ -104,7 +104,7 @@ export default function MarketingIndex() {
                                     onClick={() => setNotificationType('email')}
                                     className={`px-6 py-2 rounded-sm text-sm font-medium border transition-colors ${
                                         notificationType === 'email' 
-                                            ? 'bg-[#37696c] text-white border-[#37696c]' 
+                                            ? 'bg-[#148284] text-white border-[#148284]' 
                                             : 'bg-gray-100 text-gray-700 border-gray-200'
                                     }`}
                                 >
@@ -114,7 +114,7 @@ export default function MarketingIndex() {
                                     onClick={() => setNotificationType('push')}
                                     className={`px-6 py-2 rounded-sm text-sm font-medium border transition-colors ${
                                         notificationType === 'push' 
-                                            ? 'bg-[#37696c] text-white border-[#37696c]' 
+                                            ? 'bg-[#148284] text-white border-[#148284]' 
                                             : 'bg-gray-100 text-gray-700 border-gray-200'
                                     }`}
                                 >
@@ -126,7 +126,7 @@ export default function MarketingIndex() {
                         {/* Customer Type */}
                         <div className="space-y-4">
                             <label className="text-sm font-medium text-gray-600">Select Customer Type <span className="text-red-500">*</span></label>
-                            <select className="w-full max-w-md px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-[#37696c] focus:border-[#37696c] text-sm text-gray-600">
+                            <select className="w-full max-w-md px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-[#148284] focus:border-[#148284] text-sm text-gray-600">
                                 <option>All Customers</option>
                             </select>
                         </div>
@@ -137,7 +137,7 @@ export default function MarketingIndex() {
                                 <label className="text-sm font-medium text-gray-600">Email Subject</label>
                                 <input 
                                     type="text" 
-                                    className="w-full max-w-2xl px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-[#37696c] focus:border-[#37696c]" 
+                                    className="w-full max-w-2xl px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-[#148284] focus:border-[#148284]" 
                                 />
                             </div>
                         )}
@@ -147,7 +147,7 @@ export default function MarketingIndex() {
                             <label className="text-sm font-medium text-gray-600">{notificationType === 'email' ? 'Email Body' : 'Message Body'}</label>
                             <textarea 
                                 rows={4}
-                                className="w-full max-w-2xl px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-[#37696c] focus:border-[#37696c]" 
+                                className="w-full max-w-2xl px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-[#148284] focus:border-[#148284]" 
                             />
                         </div>
 
@@ -163,7 +163,7 @@ export default function MarketingIndex() {
                             <button className="px-6 py-2 bg-[#d9534f] text-white rounded text-sm font-medium hover:bg-red-600 transition-colors">
                                 Back
                             </button>
-                            <button className="px-6 py-2 bg-[#337ab7] text-white rounded text-sm font-medium hover:bg-blue-600 transition-colors">
+                            <button className="px-6 py-2 bg-[#148284] text-white rounded text-sm font-medium hover:bg-blue-600 transition-colors">
                                 Send
                             </button>
                         </div>
@@ -189,7 +189,7 @@ export default function MarketingIndex() {
                     <div className="bg-white rounded-md shadow-sm border border-gray-200">
                         <div className="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
                             <h2 className="text-lg font-medium text-gray-700">Refer A Friend:</h2>
-                            <button className="p-2 bg-[#37696c] text-white rounded hover:bg-[#2d5659]">
+                            <button className="p-2 bg-[#148284] text-white rounded hover:bg-[#2d5659]">
                                 <FolderOpen className="w-4 h-4" />
                             </button>
                         </div>
@@ -198,15 +198,15 @@ export default function MarketingIndex() {
                             {/* Reward Toggle */}
                             <div className="flex flex-wrap gap-8 mb-8">
                                 <label className="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="reward_type" className="w-5 h-5 text-[#37696c] border-gray-300 focus:ring-[#37696c]" />
+                                    <input type="radio" name="reward_type" className="w-5 h-5 text-[#148284] border-gray-300 focus:ring-[#148284]" />
                                     <span className="text-sm text-gray-600">Refer without reward</span>
                                 </label>
                                 <label className="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="reward_type" defaultChecked className="w-5 h-5 text-[#37696c] border-gray-300 focus:ring-[#37696c]" />
+                                    <input type="radio" name="reward_type" defaultChecked className="w-5 h-5 text-[#148284] border-gray-300 focus:ring-[#148284]" />
                                     <span className="text-sm text-gray-600">Refer with reward</span>
                                 </label>
                                 <label className="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="reward_type" className="w-5 h-5 text-[#37696c] border-gray-300 focus:ring-[#37696c]" />
+                                    <input type="radio" name="reward_type" className="w-5 h-5 text-[#148284] border-gray-300 focus:ring-[#148284]" />
                                     <span className="text-sm text-gray-600">Disable</span>
                                 </label>
                             </div>
@@ -217,7 +217,7 @@ export default function MarketingIndex() {
                                 <input 
                                     type="text" 
                                     defaultValue="https://freshtick.rekart.io/home"
-                                    className="w-full max-w-lg px-3 py-2 border border-gray-300 rounded text-sm focus:ring-[#37696c] focus:border-[#37696c]" 
+                                    className="w-full max-w-lg px-3 py-2 border border-gray-300 rounded text-sm focus:ring-[#148284] focus:border-[#148284]" 
                                 />
                             </div>
 
@@ -231,7 +231,7 @@ export default function MarketingIndex() {
                                         defaultValue={`Get cashback of {{REFEREE_REWARD}} on your first recharge of {{MIN_RECHARGE_AMOUNT}}.
 Use my referral code: {{REF_CODE}}
 Link to download app {{SHORT_LINK_URL}}`}
-                                        className="w-full p-3 border border-gray-300 rounded text-sm focus:ring-[#37696c] focus:border-[#37696c]"
+                                        className="w-full p-3 border border-gray-300 rounded text-sm focus:ring-[#148284] focus:border-[#148284]"
                                     />
                                 </div>
 
@@ -242,7 +242,7 @@ Link to download app {{SHORT_LINK_URL}}`}
                                         <input 
                                             type="text" 
                                             defaultValue="82"
-                                            className="w-40 px-3 py-2 border border-gray-300 rounded text-sm text-right focus:ring-[#37696c] focus:border-[#37696c]" 
+                                            className="w-40 px-3 py-2 border border-gray-300 rounded text-sm text-right focus:ring-[#148284] focus:border-[#148284]" 
                                         />
                                     </div>
                                     <div className="flex items-center justify-between">
@@ -250,7 +250,7 @@ Link to download app {{SHORT_LINK_URL}}`}
                                         <input 
                                             type="text" 
                                             defaultValue="42"
-                                            className="w-40 px-3 py-2 border border-gray-300 rounded text-sm text-right focus:ring-[#37696c] focus:border-[#37696c]" 
+                                            className="w-40 px-3 py-2 border border-gray-300 rounded text-sm text-right focus:ring-[#148284] focus:border-[#148284]" 
                                         />
                                     </div>
                                     <div className="flex items-center justify-between">
@@ -258,7 +258,7 @@ Link to download app {{SHORT_LINK_URL}}`}
                                         <input 
                                             type="text" 
                                             defaultValue="503"
-                                            className="w-40 px-3 py-2 border border-gray-300 rounded text-sm text-right focus:ring-[#37696c] focus:border-[#37696c]" 
+                                            className="w-40 px-3 py-2 border border-gray-300 rounded text-sm text-right focus:ring-[#148284] focus:border-[#148284]" 
                                         />
                                     </div>
                                 </div>

@@ -42,7 +42,7 @@ export default function Sidebar({ isCollapsed = false, onToggleCollapse, onClose
 
     return (
         <aside className="relative flex h-full flex-col bg-white shadow-[20px_0_50px_-20px_rgba(0,0,0,0.05)] transition-all duration-300">
-            <div className={`flex h-16 min-h-[64px] items-center ${isCollapsed ? 'lg:justify-center justify-between px-6 lg:px-0' : 'justify-between px-6'}`} style={{ backgroundColor: 'var(--primary-color)' }}>
+            <div className={`flex h-16 min-h-[64px] items-center ${isCollapsed ? 'lg:justify-center justify-between px-6 lg:px-0' : 'justify-between px-6'}`} style={{ backgroundColor: '#148284' }}>
                 <div className={`flex items-center gap-2 ${isCollapsed ? 'lg:hidden' : ''}`}>
                     <img src="/images/logo_light.png" alt="freshtick" className="h-6 w-auto" />
                 </div>
@@ -70,7 +70,7 @@ export default function Sidebar({ isCollapsed = false, onToggleCollapse, onClose
                                         ? 'text-white border-l-4'
                                         : 'text-gray-500 hover:bg-gray-50 hover:text-gray-900 border-l-4 border-transparent'
                                     }`}
-                                style={isActive ? { backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)', filter: 'brightness(1.1)' } : {}}
+                                style={isActive ? { backgroundColor: '#148284', borderColor: '#148284', filter: 'brightness(1.1)' } : {}}
                             >
                                 <Icon className={`h-[18px] w-[18px] min-w-[18px] ${isActive ? 'text-white' : 'text-gray-500'}`} />
                                 <span className={`truncate ${isCollapsed ? 'lg:hidden' : ''}`}>{label}</span>
@@ -84,7 +84,7 @@ export default function Sidebar({ isCollapsed = false, onToggleCollapse, onClose
                     <p>Version: 1.0.0</p>
                     <p>Time: {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
                     <p className="mt-2 uppercase tracking-wider">
-                        Product By <span className="font-bold" style={{ color: 'var(--primary-color)' }}>{(usePage().props.theme as any)?.app_name || 'FRESHTICK'}</span>
+                        Product By <span className="font-bold" style={{ color: '#148284' }}>{(usePage().props.theme as any)?.app_name || 'FRESHTICK'}</span>
                     </p>
                 </div>
             </div>

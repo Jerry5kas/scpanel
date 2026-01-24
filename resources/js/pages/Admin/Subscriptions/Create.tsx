@@ -17,7 +17,7 @@ export default function Create() {
                             onClick={() => setActiveTab('one-time')}
                             className={`px-5 py-2 text-sm font-medium transition-all duration-200 ${
                                 activeTab === 'one-time' 
-                                    ? 'bg-[#37696c] text-white shadow-sm' 
+                                    ? 'bg-[#148284] text-white shadow-sm' 
                                     : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
                             }`}
                         >
@@ -27,7 +27,7 @@ export default function Create() {
                             onClick={() => setActiveTab('subscription')}
                             className={`px-5 py-2 text-sm font-medium transition-all duration-200 ${
                                 activeTab === 'subscription' 
-                                    ? 'bg-[#37696c] text-white shadow-sm' 
+                                    ? 'bg-[#148284] text-white shadow-sm' 
                                     : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
                             }`}
                         >
@@ -49,7 +49,7 @@ export default function Create() {
                                 </label>
                                 <input 
                                     type="text" 
-                                    className="w-full h-11 px-4 border border-gray-300 rounded-lg hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-[#37696c]/20 focus:border-[#37696c] transition-all bg-gray-50 focus:bg-white"
+                                    className="w-full h-11 px-4 border border-gray-300 rounded-lg hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-[#148284]/20 focus:border-[#148284] transition-all bg-gray-50 focus:bg-white"
                                 />
                             </div>
                             
@@ -67,10 +67,10 @@ export default function Create() {
                     <button className="bg-[#d9534f] hover:bg-[#c9302c] text-white px-6 py-2.5 rounded-lg shadow-sm font-bold transition-all hover:shadow-md hover:-translate-y-0.5 active:scale-95">
                         Cancel
                     </button>
-                    <button className="bg-[#337ab7] hover:bg-[#286090] text-white px-6 py-2.5 rounded-lg shadow-sm font-bold transition-all hover:shadow-md hover:-translate-y-0.5 active:scale-95">
+                    <button className="bg-[#148284] hover:bg-[#286090] text-white px-6 py-2.5 rounded-lg shadow-sm font-bold transition-all hover:shadow-md hover:-translate-y-0.5 active:scale-95">
                         Create & New
                     </button>
-                    <button className="bg-[#337ab7] hover:bg-[#286090] text-white px-6 py-2.5 rounded-lg shadow-sm font-bold transition-all hover:shadow-md hover:-translate-y-0.5 active:scale-95">
+                    <button className="bg-[#148284] hover:bg-[#286090] text-white px-6 py-2.5 rounded-lg shadow-sm font-bold transition-all hover:shadow-md hover:-translate-y-0.5 active:scale-95">
                         Create & View
                     </button>
                 </div>

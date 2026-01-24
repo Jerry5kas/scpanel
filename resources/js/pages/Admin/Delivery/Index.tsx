@@ -26,9 +26,9 @@ export default function DeliveryIndex() {
                                 <input 
                                     type="text" 
                                     defaultValue="24-01-2026"
-                                    className="w-full pl-3 pr-10 py-2 border border-gray-300 rounded text-sm focus:ring-[#37696c] focus:border-[#37696c]" 
+                                    className="w-full pl-3 pr-10 py-2 border border-gray-300 rounded text-sm focus:ring-[#148284] focus:border-[#148284]" 
                                 />
-                                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none bg-[#37696c] rounded-r border border-[#37696c]">
+                                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none bg-[#148284] rounded-r border border-[#148284]">
                                     <Calendar className="w-4 h-4 text-white" />
                                 </div>
                             </div>
@@ -38,7 +38,7 @@ export default function DeliveryIndex() {
                         <div className="space-y-1">
                             <label className="text-xs font-semibold text-gray-600">Delivery Time</label>
                             <div className="relative">
-                                <select className="w-full px-3 py-2 border border-gray-300 rounded text-sm appearance-none focus:ring-[#37696c] focus:border-[#37696c] bg-white text-gray-700">
+                                <select className="w-full px-3 py-2 border border-gray-300 rounded text-sm appearance-none focus:ring-[#148284] focus:border-[#148284] bg-white text-gray-700">
                                     <option>One Time Order</option>
                                     <option>Morning</option>
                                     <option>Evening</option>
@@ -51,7 +51,7 @@ export default function DeliveryIndex() {
                         <div className="space-y-1 md:col-span-1">
                             <label className="text-xs font-semibold text-gray-600">Hub</label>
                              <div className="relative">
-                                <select className="w-full px-3 py-2 border border-gray-300 rounded text-sm appearance-none focus:ring-[#37696c] focus:border-[#37696c] bg-white text-gray-700">
+                                <select className="w-full px-3 py-2 border border-gray-300 rounded text-sm appearance-none focus:ring-[#148284] focus:border-[#148284] bg-white text-gray-700">
                                     <option>FRESHTICK Hub (Vypin co-op s...</option>
                                 </select>
                                 <ChevronDown className="absolute right-3 top-2.5 w-4 h-4 text-gray-400 pointer-events-none" />
@@ -62,7 +62,7 @@ export default function DeliveryIndex() {
                          <div className="space-y-1 md:col-span-1">
                             <label className="text-xs font-semibold text-gray-600">Route-Rider</label>
                              <div className="relative">
-                                <select className="w-full px-3 py-2 border border-gray-300 rounded text-sm appearance-none focus:ring-[#37696c] focus:border-[#37696c] bg-white text-gray-700">
+                                <select className="w-full px-3 py-2 border border-gray-300 rounded text-sm appearance-none focus:ring-[#148284] focus:border-[#148284] bg-white text-gray-700">
                                     <option>Malipuram → Nishamil, Nayara...</option>
                                 </select>
                                 <ChevronDown className="absolute right-3 top-2.5 w-4 h-4 text-gray-400 pointer-events-none" />
@@ -73,7 +73,7 @@ export default function DeliveryIndex() {
                         <div className="flex gap-2">
                              <button 
                                 onClick={() => setShowResult(true)}
-                                className="flex-1 py-2 px-4 bg-[#337ab7] hover:bg-blue-700 text-white rounded shadow-sm text-sm font-medium transition-colors"
+                                className="flex-1 py-2 px-4 bg-[#148284] hover:bg-blue-700 text-white rounded shadow-sm text-sm font-medium transition-colors"
                             >
                                 Show
                             </button>
@@ -107,13 +107,13 @@ export default function DeliveryIndex() {
                                     <span className="text-sm font-medium text-gray-700">Label Print</span>
                                 </div>
                                 
-                                <button className="text-[#337ab7] text-sm hover:underline">Optimize</button>
+                                <button className="text-[#148284] text-sm hover:underline">Optimize</button>
                             </div>
 
                             <div className="flex items-start gap-4">
                                 <div className="grid grid-cols-2 gap-x-8 gap-y-3">
                                     <label className="flex items-center gap-2 cursor-pointer">
-                                        <div className="w-5 h-5 bg-[#37696c] rounded border-none flex items-center justify-center">
+                                        <div className="w-5 h-5 bg-[#148284] rounded border-none flex items-center justify-center">
                                             <Check className="w-3 h-3 text-white" />
                                         </div>
                                         <span className="text-sm text-gray-600">Deliveries</span>
@@ -131,7 +131,7 @@ export default function DeliveryIndex() {
                                         <span className="text-sm text-gray-600">Expected Only</span>
                                     </label>
                                 </div>
-                                <button className="p-2 bg-[#337ab7] text-white rounded shadow-sm hover:bg-blue-700">
+                                <button className="p-2 bg-[#148284] text-white rounded shadow-sm hover:bg-blue-700">
                                     <Menu className="w-5 h-5" />
                                 </button>
                             </div>
