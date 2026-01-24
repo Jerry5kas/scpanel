@@ -98,4 +98,34 @@ Route::middleware(['web', 'auth.admin', 'ensure.admin'])->prefix('admin')->name(
     Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
     Route::get('/theme', [ThemeSettingController::class, 'edit'])->name('theme.edit');
     Route::put('/theme', [ThemeSettingController::class, 'update'])->name('theme.update');
+    Route::get('/subscriptions', function () {
+        return Inertia::render('Admin/Subscriptions/Index');
+    })->name('subscriptions.index');
+    Route::get('/subscriptions/create', function () {
+        return Inertia::render('Admin/Subscriptions/Create');
+    })->name('subscriptions.create');
+    Route::get('/customers', function () {
+        return Inertia::render('Admin/Customers/Index');
+    })->name('customers.index');
+    Route::get('/payments', function () {
+        return Inertia::render('Admin/Payments/Index');
+    })->name('payments.index');
+     Route::get('/orders', function () {
+        return Inertia::render('Admin/Orders/Index');
+    })->name('orders.index');
+     Route::get('/delivery', function () {
+        return Inertia::render('Admin/Delivery/Index');
+    })->name('delivery.index');
+    Route::get('/marketing', function () {
+        return Inertia::render('Admin/Marketing/Index');
+    })->name('marketing.index');
+    Route::get('/utilities', function () {
+        return Inertia::render('Admin/Utilities/Index');
+    })->name('utilities.index');
+    Route::get('/bills', function () {
+        return Inertia::render('Admin/Bills/Index');
+    })->name('bills.index');
+    Route::get('/reports', function () {
+        return Inertia::render('Admin/Reports/Index');
+    })->name('reports.index');
 });
